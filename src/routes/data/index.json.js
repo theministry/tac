@@ -16,7 +16,7 @@ const extractFrontMatter = (markdown) => {
 
 const getProject = (filename) => {
   try {
-    const rawProjectData = fs.readFileSync(`./static/projects/${filename}`, "utf-8")
+    const rawProjectData = fs.readFileSync(`./projects/${filename}`, "utf-8")
     return extractFrontMatter(rawProjectData)
 
   } catch (e) {
@@ -26,7 +26,7 @@ const getProject = (filename) => {
 
 const getProjects = () => {
   try {
-    return fs.readdirSync("./static/projects").reduce(
+    return fs.readdirSync("./projects").reduce(
       (projects, filename) => {
         const slug = path.parse(filename).name
         if(!slug.startsWith(".")){
@@ -41,7 +41,7 @@ const getProjects = () => {
 
 const getInfo = (slug) => {
   try {
-    const rawInfoData = fs.readFileSync(`./static/info/${slug}`, "utf-8")
+    const rawInfoData = fs.readFileSync(`./info/${slug}`, "utf-8")
     return extractFrontMatter(rawInfoData)
 
   } catch (e) {
@@ -51,7 +51,7 @@ const getInfo = (slug) => {
 
 const getInfoList = () => {
   try {
-    return fs.readdirSync("./static/info").reduce(
+    return fs.readdirSync("./info").reduce(
       (infoList, filename) => {
         const slug = path.parse(filename).name
         if(!slug.startsWith(".")){
