@@ -16,7 +16,7 @@ const extractFrontMatter = (markdown) => {
 
 const getInfo = (slug) => {
   try {
-    const rawInfoData = fs.readFileSync(path.resolve(`./static/info/${slug}.md`), "utf-8")
+    const rawInfoData = fs.readFileSync(path.resolve("./public", `info/${slug}.md`), "utf-8")
     return extractFrontMatter(rawInfoData)
 
   } catch (e) {
