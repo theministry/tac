@@ -33,9 +33,9 @@
     on:mousedown={ (e) => startDrag(e) }
   >
     <picture>
-      <source type="image/webp" srcset="static/img/bg.webp">
-      <source type="image/jpg" srcset="static/img/bg.jpg">
-      <img src="static/img/bg.jpg" alt="map">
+      <source type="image/webp" srcset="/img/bg.webp">
+      <source type="image/jpg" srcset="/img/bg.jpg">
+      <img src="/img/bg.jpg" alt="map">
     </picture>
     <Markers />
   </div>

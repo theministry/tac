@@ -24,7 +24,7 @@
     top: {top}px;
     width: {diameter}px;
     height: {diameter}px;
-    background-image: url('static/img/{marker}');
+    background-image: url('img/{marker}');
   "
   on:click={() => {
     console.log("clicking", id);
@@ -77,7 +77,7 @@
 <div
   class="marker"
   style="
-    background-image: url('static/img/{marker}');
+    background-image: url('img/{marker}');
     left:{left}px;
     top:{top}px;
     width: {size.width}px;

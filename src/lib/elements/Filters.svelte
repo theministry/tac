@@ -22,19 +22,6 @@
 </script>
 
 <div class="filters">
-  <header><span>Debug</span></header>
-  <ul>
-    <li>viewport width: {$viewport.width}</li>
-    <li>viewport height: {$viewport.height}</li>
-    <li>pos x: {$pos.x}</li>
-    <li>pos y: {$pos.y}</li>
-    <li>scale: {$scale}</li>
-    <li>mouse x: {$mouse.x}</li>
-    <li>mouse y: {$mouse.y}</li>
-    <li>current x: {$pos.x + $mouse.x - 224}</li>
-    <li>current y: {$pos.y + $mouse.y - 106}</li>
-  </ul>
-
   <header><span>Location</span></header>
   <ul>
     <li><Checkbox bind:checked={$meeting}>Meeting Space</Checkbox></li>
