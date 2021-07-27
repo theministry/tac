@@ -19,7 +19,7 @@
   <div class="images">
     <div class="inner info img">
       {#each images as image}
-        <img src="/img/{image}" alt="{image}" />
+        <img src="/img/info/{image}" alt="{image}" />
       {/each}
     </div>
   </div>
