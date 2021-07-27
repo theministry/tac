@@ -9,8 +9,8 @@ collections:
   - name: 'info'
     label: 'Info Pages'
     folder: 'public/info'
-    media_folder: '{{media_folder}}/info'
-    public_folder: '{{public_folder}}/info'
+    media_folder: '/{{media_folder}}/info'
+    public_folder: '/{{public_folder}}/info'
     create: true
     slug: '{{slug}}'
     fields:
@@ -31,8 +31,8 @@ collections:
   - name: 'projects'
     label: 'Projects'
     folder: 'public/projects'
-    media_folder: '{{media_folder}}/projects'
-    public_folder: '{{public_folder}}/projects'
+    media_folder: '/{{media_folder}}/projects'
+    public_folder: '/{{public_folder}}/projects'
     create: true
     slug: '{{slug}}'
     fields:
