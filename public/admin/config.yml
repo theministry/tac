@@ -1,0 +1,92 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: 'public/img/uploads'
+public_folder: 'img/uploads'
+
+collections:
+  - name: 'info'
+    label: 'Info Pages'
+    folder: 'public/info'
+    create: true
+    slug: '{{slug}}'
+    fields:
+      - label: 'Title'
+        name: 'title'
+        widget: 'string'
+      - label: 'Images'
+        name: 'images'
+        widget: 'list'
+        summary: '{{fields.image}}'
+        field:
+          label: 'Image'
+          name: 'image'
+          widget: 'image'
+  - name: 'projects'
+    label: 'Projects'
+    folder: 'public/projects'
+    create: true
+    slug: '{{slug}}'
+    fields:
+      - label: 'Id'
+        name: 'id'
+        widget: 'number'
+        default: 100
+        min: 1
+        max: 999
+      - label: 'Coordinates'
+        name: 'coordinates'
+        widget: 'object'
+        summary: '[{{fields.x}} : {{fields.y}}]'
+        fields:
+          - label: 'x'
+            name: 'x'
+            widget: 'number'
+            default: 5000
+          - label: 'y'
+            name: 'y'
+            widget: 'number'
+            default: 5000
+      - label: 'Size'
+        name: 'size'
+        widget: 'object'
+        summary: 'w: {{fields.width}} | h: {{fields.height}}]'
+        fields:
+          - label: 'width'
+            name: 'width'
+            widget: 'number'
+            default: 500
+          - label: 'height'
+            name: 'height'
+            widget: 'number'
+            default: 500
+      - label: 'Name'
+        name: 'name'
+        widget: 'string'
+      - label: 'Author'
+        name: 'author'
+        widget: 'string'
+      - label: 'Location'
+        name: 'location'
+        widget: 'select'
+        options:
+          - label: 'Common Room'
+            value: 'common'
+          - label: 'Meeting Space'
+            value: 'meeting'
+          - label: 'Co-working Space'
+            value: 'coworking'
+          - label: 'Atelier'
+            value: 'atelier'
+      - label: 'Action'
+        name: 'action'
+        widget: 'string'
+      - label: 'Images'
+        name: 'images'
+        widget: 'list'
+        summary: '{{fields.image}}'
+        field:
+          label: 'Image'
+          name: 'image'
+          widget: 'image'
