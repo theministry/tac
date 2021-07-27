@@ -2,8 +2,8 @@ backend:
   name: git-gateway
   branch: master
 
-media_folder: 'public/img/uploads'
-public_folder: 'img/uploads'
+media_folder: 'public/img'
+public_folder: 'img'
 
 collections:
   - name: 'info'
@@ -23,6 +23,9 @@ collections:
           label: 'Image'
           name: 'image'
           widget: 'image'
+      - label: 'Content'
+        name: 'body'
+        widget: 'markdown'
   - name: 'projects'
     label: 'Projects'
     folder: 'public/projects'
@@ -90,3 +93,6 @@ collections:
           label: 'Image'
           name: 'image'
           widget: 'image'
+      - label: 'Instructions'
+        name: 'body'
+        widget: 'markdown'
