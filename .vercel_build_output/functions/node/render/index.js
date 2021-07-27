@@ -7653,7 +7653,7 @@ function init(settings) {
 var d = decodeURIComponent;
 var empty = () => ({});
 var manifest = {
-  assets: [{ "file": "favicon.png", "size": 1571, "type": "image/png" }, { "file": "img/archive/01/01.png", "size": 180709, "type": "image/png" }, { "file": "img/archive/01/02.png", "size": 183623, "type": "image/png" }, { "file": "img/archive/02/01.png", "size": 145766, "type": "image/png" }, { "file": "img/archive/02/02.png", "size": 141788, "type": "image/png" }, { "file": "img/archive/03/01.png", "size": 162620, "type": "image/png" }, { "file": "img/archive/03/02.png", "size": 128880, "type": "image/png" }, { "file": "img/archive/04/01.png", "size": 145301, "type": "image/png" }, { "file": "img/archive/04/02.png", "size": 175647, "type": "image/png" }, { "file": "img/archive/05/01.png", "size": 97828, "type": "image/png" }, { "file": "img/archive/05/02.png", "size": 57535, "type": "image/png" }, { "file": "img/archive/06/01.png", "size": 107802, "type": "image/png" }, { "file": "img/archive/06/02.png", "size": 62638, "type": "image/png" }, { "file": "img/archive/07/01.png", "size": 90238, "type": "image/png" }, { "file": "img/archive/08/01.png", "size": 194822, "type": "image/png" }, { "file": "img/archive/08/02.png", "size": 176266, "type": "image/png" }, { "file": "img/archive/09/01.png", "size": 150015, "type": "image/png" }, { "file": "img/archive/09/02.png", "size": 188971, "type": "image/png" }, { "file": "img/archive/10/01.png", "size": 125970, "type": "image/png" }, { "file": "img/archive/10/02.png", "size": 98541, "type": "image/png" }, { "file": "img/archive/11/01.png", "size": 139395, "type": "image/png" }, { "file": "img/archive/12/01.png", "size": 32354, "type": "image/png" }, { "file": "img/archive/12/02.png", "size": 95523, "type": "image/png" }, { "file": "img/archive/12/03.png", "size": 120297, "type": "image/png" }, { "file": "img/archive/13/01.png", "size": 124, "type": "image/png" }, { "file": "img/archive/14/01.png", "size": 94296, "type": "image/png" }, { "file": "img/archive/15/01.png", "size": 244894, "type": "image/png" }, { "file": "img/archive/15/02.png", "size": 238404, "type": "image/png" }, { "file": "img/archive/16/01.png", "size": 86683, "type": "image/png" }, { "file": "img/archive/16/02.png", "size": 68817, "type": "image/png" }, { "file": "img/archive/17/01.png", "size": 195464, "type": "image/png" }, { "file": "img/archive/17/02.png", "size": 164521, "type": "image/png" }, { "file": "img/archive/18/01.png", "size": 226145, "type": "image/png" }, { "file": "img/archive/18/02.png", "size": 244143, "type": "image/png" }, { "file": "img/archive/19/01.png", "size": 84478, "type": "image/png" }, { "file": "img/archive/19/02.png", "size": 101635, "type": "image/png" }, { "file": "img/archive/20/01.png", "size": 164812, "type": "image/png" }, { "file": "img/archive/20/02.png", "size": 166791, "type": "image/png" }, { "file": "img/archive/21/01.png", "size": 220644, "type": "image/png" }, { "file": "img/archive/22/01.png", "size": 115852, "type": "image/png" }, { "file": "img/archive/22/02.png", "size": 109429, "type": "image/png" }, { "file": "img/archive/23/01.png", "size": 148574, "type": "image/png" }, { "file": "img/archive/23/02.png", "size": 111609, "type": "image/png" }, { "file": "img/archive/24/01.png", "size": 58320, "type": "image/png" }, { "file": "img/archive/25/01.png", "size": 297862, "type": "image/png" }, { "file": "img/archive/26/01.png", "size": 166041, "type": "image/png" }, { "file": "img/archive/26/02.png", "size": 137134, "type": "image/png" }, { "file": "img/archive/27/01.png", "size": 121569, "type": "image/png" }, { "file": "img/archive/27/02.png", "size": 102171, "type": "image/png" }, { "file": "img/archive/27/03.png", "size": 98755, "type": "image/png" }, { "file": "img/archive/28/01.png", "size": 107240, "type": "image/png" }, { "file": "img/archive/28/02.png", "size": 106561, "type": "image/png" }, { "file": "img/archive/29/01.png", "size": 171925, "type": "image/png" }, { "file": "img/archive/29/02.png", "size": 186808, "type": "image/png" }, { "file": "img/archive/29/03.png", "size": 192792, "type": "image/png" }, { "file": "img/bg.jpg", "size": 16132545, "type": "image/jpeg" }, { "file": "img/bg.png", "size": 5485726, "type": "image/png" }, { "file": "img/bg.webp", "size": 6321530, "type": "image/webp" }, { "file": "img/objects/object_01.png", "size": 63066, "type": "image/png" }, { "file": "img/objects/object_02.png", "size": 52532, "type": "image/png" }, { "file": "img/objects/object_03.png", "size": 172944, "type": "image/png" }, { "file": "img/objects/object_04.png", "size": 66135, "type": "image/png" }, { "file": "img/objects/object_05.png", "size": 73089, "type": "image/png" }, { "file": "img/objects/object_06.png", "size": 59752, "type": "image/png" }, { "file": "img/objects/object_07.png", "size": 23696, "type": "image/png" }, { "file": "img/objects/object_08.png", "size": 175243, "type": "image/png" }, { "file": "img/objects/object_09.png", "size": 325187, "type": "image/png" }, { "file": "img/objects/object_10.png", "size": 284871, "type": "image/png" }, { "file": "img/objects/object_11.png", "size": 163949, "type": "image/png" }, { "file": "img/objects/object_12.png", "size": 1154871, "type": "image/png" }, { "file": "img/objects/object_13.png", "size": 82, "type": "image/png" }, { "file": "img/objects/object_14.png", "size": 109884, "type": "image/png" }, { "file": "img/objects/object_15.png", "size": 223433, "type": "image/png" }, { "file": "img/objects/object_16.png", "size": 204891, "type": "image/png" }, { "file": "img/objects/object_17.png", "size": 374670, "type": "image/png" }, { "file": "img/objects/object_18.png", "size": 999050, "type": "image/png" }, { "file": "img/objects/object_19.png", "size": 70542, "type": "image/png" }, { "file": "img/objects/object_20.png", "size": 177274, "type": "image/png" }, { "file": "img/objects/object_21.png", "size": 98492, "type": "image/png" }, { "file": "img/objects/object_22.png", "size": 44933, "type": "image/png" }, { "file": "img/objects/object_23.png", "size": 166544, "type": "image/png" }, { "file": "img/objects/object_24.png", "size": 115746, "type": "image/png" }, { "file": "img/objects/object_25.png", "size": 272784, "type": "image/png" }, { "file": "img/objects/object_26.png", "size": 130414, "type": "image/png" }, { "file": "img/objects/object_27.png", "size": 636348, "type": "image/png" }, { "file": "img/objects/object_28.png", "size": 134863, "type": "image/png" }, { "file": "img/objects/object_29.png", "size": 264114, "type": "image/png" }, { "file": "info/1. Introduction.md", "size": 957, "type": "text/markdown" }, { "file": "info/2. S.F.C.A..md", "size": 977, "type": "text/markdown" }, { "file": "info/3. Door2Door.md", "size": 1084, "type": "text/markdown" }, { "file": "info/4. Shared Future.md", "size": 958, "type": "text/markdown" }, { "file": "projects/01.md", "size": 259, "type": "text/markdown" }, { "file": "projects/02.md", "size": 263, "type": "text/markdown" }, { "file": "projects/03.md", "size": 263, "type": "text/markdown" }, { "file": "projects/04.md", "size": 263, "type": "text/markdown" }, { "file": "projects/05.md", "size": 263, "type": "text/markdown" }, { "file": "projects/06.md", "size": 263, "type": "text/markdown" }, { "file": "projects/07.md", "size": 239, "type": "text/markdown" }, { "file": "projects/08.md", "size": 263, "type": "text/markdown" }, { "file": "projects/09.md", "size": 264, "type": "text/markdown" }, { "file": "projects/10.md", "size": 266, "type": "text/markdown" }, { "file": "projects/11.md", "size": 240, "type": "text/markdown" }, { "file": "projects/12.md", "size": 290, "type": "text/markdown" }, { "file": "projects/13.md", "size": 216, "type": "text/markdown" }, { "file": "projects/14.md", "size": 240, "type": "text/markdown" }, { "file": "projects/15.md", "size": 264, "type": "text/markdown" }, { "file": "projects/16.md", "size": 264, "type": "text/markdown" }, { "file": "projects/17.md", "size": 264, "type": "text/markdown" }, { "file": "projects/18.md", "size": 264, "type": "text/markdown" }, { "file": "projects/19.md", "size": 263, "type": "text/markdown" }, { "file": "projects/20.md", "size": 263, "type": "text/markdown" }, { "file": "projects/21.md", "size": 239, "type": "text/markdown" }, { "file": "projects/22.md", "size": 263, "type": "text/markdown" }, { "file": "projects/23.md", "size": 263, "type": "text/markdown" }, { "file": "projects/24.md", "size": 239, "type": "text/markdown" }, { "file": "projects/25.md", "size": 239, "type": "text/markdown" }, { "file": "projects/26.md", "size": 263, "type": "text/markdown" }, { "file": "projects/27.md", "size": 290, "type": "text/markdown" }, { "file": "projects/28.md", "size": 264, "type": "text/markdown" }, { "file": "projects/29.md", "size": 288, "type": "text/markdown" }],
+  assets: [],
   layout: "src/routes/__layout.svelte",
   error: ".svelte-kit/build/components/error.svelte",
   routes: [
@@ -7796,7 +7796,7 @@ var extractFrontMatter$2 = (markdown) => {
 };
 var getProject$1 = (filename) => {
   try {
-    const rawProjectData = import_fs.default.readFileSync(`./static/projects/${filename}`, "utf-8");
+    const rawProjectData = import_fs.default.readFileSync(import_path.default.resolve("./public", `projects/${filename}`), "utf-8");
     return extractFrontMatter$2(rawProjectData);
   } catch (e) {
     return [];
@@ -7804,7 +7804,7 @@ var getProject$1 = (filename) => {
 };
 var getProjects$1 = () => {
   try {
-    return import_fs.default.readdirSync("./static/projects").reduce((projects, filename) => {
+    return import_fs.default.readdirSync(import_path.default.resolve("./public", "projects")).reduce((projects, filename) => {
       const slug = import_path.default.parse(filename).name;
       if (!slug.startsWith(".")) {
         projects[slug] = getProject$1(filename);
@@ -7817,7 +7817,7 @@ var getProjects$1 = () => {
 };
 var getInfo$1 = (slug) => {
   try {
-    const rawInfoData = import_fs.default.readFileSync(`./static/info/${slug}`, "utf-8");
+    const rawInfoData = import_fs.default.readFileSync(import_path.default.resolve("./public", `info/${slug}`), "utf-8");
     return extractFrontMatter$2(rawInfoData);
   } catch (e) {
     return [];
@@ -7825,7 +7825,7 @@ var getInfo$1 = (slug) => {
 };
 var getInfoList$1 = () => {
   try {
-    return import_fs.default.readdirSync("./static/info").reduce((infoList, filename) => {
+    return import_fs.default.readdirSync(import_path.default.resolve("./public", "info")).reduce((infoList, filename) => {
       const slug = import_path.default.parse(filename).name;
       if (!slug.startsWith(".")) {
         infoList[slug] = getInfo$1(filename);
@@ -7910,7 +7910,7 @@ var _slug__json$1 = /* @__PURE__ */ Object.freeze({
 });
 var getInfoList = () => {
   try {
-    return import_fs.default.readdirSync("./static/info").reduce((list, filename) => {
+    return import_fs.default.readdirSync(import_path.default.resolve("./public", "info")).reduce((list, filename) => {
       if (!import_path.default.parse(filename).name.startsWith(".")) {
         list.push(import_path.default.parse(filename).name);
       }
@@ -7944,7 +7944,7 @@ var extractFrontMatter = (markdown) => {
 };
 var getInfo = (slug) => {
   try {
-    const rawInfoData = import_fs.default.readFileSync(import_path.default.resolve(`./static/info/${slug}.md`), "utf-8");
+    const rawInfoData = import_fs.default.readFileSync(import_path.default.resolve("./public", `info/${slug}.md`), "utf-8");
     return extractFrontMatter(rawInfoData);
   } catch (e) {
     return [];
