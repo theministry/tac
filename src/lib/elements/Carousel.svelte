@@ -8,7 +8,7 @@
 </script>
 
 <div class="carousel" class:collapsed >
-  <img src="/img/archive/{ images[img] }" alt="{images[img]}" />
+  <img src="/img/projects/{ images[img] }" alt="{images[img]}" />
   <div class="buttons" class:collapsed>
     {#each images as image, index}
       <button on:click={() => {img = index}} class="{ img==index ? 'active' : '' }" />

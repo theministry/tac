@@ -42,6 +42,9 @@ collections:
         default: 100
         min: 1
         max: 999
+      - label: 'Map Marker Image'
+        name: 'marker'
+        widget: 'image'
       - label: 'Coordinates'
         name: 'coordinates'
         widget: 'object'

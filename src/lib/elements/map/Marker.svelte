@@ -77,7 +77,7 @@
 <div
   class="marker"
   style="
-    background-image: url('img/objects/{marker}');
+    background-image: url('img/projects/{marker}');
     left:{left}px;
     top:{top}px;
     width: {size.width}px;
