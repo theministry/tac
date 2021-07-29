@@ -62,6 +62,12 @@
     display: grid;
     grid-template-rows: repeat(4, 1fr);
     grid-template-columns: repeat(5, 1fr);
+
+    user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
   }
   .map {
     transform-origin: top left;
