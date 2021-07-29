@@ -10,9 +10,9 @@ let config = {
   moveStep: 50,
 
   startZoom: 1.0,
-  zoomStep: 0.2,
-  minZoom: 0.2,
-  maxZoom: 1.4,
+  zoomStep: 0.1,
+  minZoom: 0.8,
+  maxZoom: 1.5,
 }
 
 function createScale(config) {
