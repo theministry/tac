@@ -27,8 +27,6 @@
     
     display: flex;
     flex-direction: row;
-    overflow-x: auto;
-    max-width: 100%;
   }
 
   .collapsed {
@@ -67,6 +65,5 @@
   img {
     width: 100%;
     height: auto;
-    max-width: 100%;
   }
 </style>

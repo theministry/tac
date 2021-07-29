@@ -38,5 +38,7 @@
     flex-direction: column;
     width: 400px;
     border-right: var(--border);
+
+    max-width: 80%;
   }
 </style>

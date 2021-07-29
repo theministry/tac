@@ -56,7 +56,7 @@
   }
 
   @media screen and (max-width: 600px) {
-    button {
+    .left, .right, .up, .down {
       display: none;
     }
   }

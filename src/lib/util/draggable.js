@@ -8,6 +8,7 @@ export function startDrag(e) {
   dragging.set(true);
   o.x = (e.pageX + x);
   o.y = (e.pageY + y);
+
   document.addEventListener("mousemove", drag);
   document.addEventListener("touchmove", drag);
   document.addEventListener("mouseup", endDrag);
@@ -15,9 +16,14 @@ export function startDrag(e) {
 }
 
 export function drag(e) {
-  moved.set(true);
   let x = -(e.pageX - o.x);
   let y = -(e.pageY - o.y);
+  
+  let p = get(pos);
+  if (Math.abs(o.x - e.pageX - p.x) > 1 || Math.abs(o.x - e.pageX - p.x) > 1) {
+    moved.set(true);
+  }
+
   pos.moveTo({x, y});
   e.preventDefault();
 }
