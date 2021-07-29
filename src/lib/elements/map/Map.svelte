@@ -45,6 +45,7 @@
       transform: {matrix};
     "
     on:mousedown={ (e) => startDrag(e) }
+    on:touchstart={ (e) => startDrag(e) }
   >
     <div class="img grid">
       {#each Array(rows) as _, row}
