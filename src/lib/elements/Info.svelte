@@ -82,4 +82,13 @@
   :global(.inner.info > h1) {
     font-size: 3rem;
   }
+
+  @media screen and (max-width: 600px) {
+    .images {
+      display: none;
+    }
+    .text {
+      width: 100%;
+    }
+  }
 </style>

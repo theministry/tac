@@ -14,4 +14,10 @@
     flex-grow: 0;
     flex-shrink: 0;
   }
+
+  @media screen and (max-width: 1024px) {
+    aside {
+      display: none;
+    }
+  }
 </style>

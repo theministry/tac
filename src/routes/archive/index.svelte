@@ -41,6 +41,7 @@
 <style>
   .bg {
     width: 100%;
+    max-width: 100%;
     background-color: white;
 
     background-image:  linear-gradient(#eee 2px, transparent 2px), linear-gradient(90deg, #eee 2px, transparent 2px), linear-gradient(#eee 1px, transparent 1px), linear-gradient(90deg, #eee 1px, white 1px);
@@ -59,5 +60,12 @@
     padding: 2rem;
     margin: 0 auto;
     justify-content: center;
+  }
+
+  @media screen and (max-width: 88rem) {
+    .projects {
+      max-width: 100%;
+      grid-template-columns: 100%;
+    }
   }
 </style>

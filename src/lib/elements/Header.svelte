@@ -33,4 +33,16 @@
 
     border-bottom: var(--border);
   }
+
+  @media screen and (max-width: 1024px) {
+    h1, nav {
+      font-size: 3rem;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    h1, nav {
+      font-size: 2rem;
+    }
+  }
 </style>

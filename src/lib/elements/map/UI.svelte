@@ -55,6 +55,12 @@
     padding: 2px 4px;
   }
 
+  @media screen and (max-width: 600px) {
+    button {
+      display: none;
+    }
+  }
+
   button:hover {
     background-color: var(--grey);
     cursor: pointer;

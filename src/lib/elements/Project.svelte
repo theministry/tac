@@ -93,6 +93,7 @@
     display: flex;
     flex-direction: column;
     min-height: 0;
+    max-width: 100%;
   }
 
   .expandable {
@@ -110,12 +111,21 @@
     transition: all ease-in-out 1s;
   }
 
+  @media screen and (max-width: 88rem) {
+    .expanded {
+      max-width: 100%;
+      grid-row-end: span 4;
+      grid-column-end: span 1;
+    }
+  }
+
   .project {
     display: flex;
     flex-direction: column;
     min-height: 0;
     flex-grow: 1;
     max-height: 100%;
+    max-width: 100%;
     background-color:white;
   }
 
