@@ -27,6 +27,7 @@
     "js-yaml": "^3.14.1",
     "marked": "^2.1.2",
     "netlify-cms-app": "^2.15.30",
+    "svelte-inview": "^2.0.1",
     "transformation-matrix": "^2.8.0"
   }
 }

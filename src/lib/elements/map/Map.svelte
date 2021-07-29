@@ -1,5 +1,6 @@
 <script>
   import { onMount } from 'svelte';
+  import { inview } from 'svelte-inview'
   import { size, pos, dragging, scale, detailsVisible, viewport } from "$lib/stores/map";
 
   import { scale as sc, translate as tr, compose, toCSS } from 'transformation-matrix';
@@ -48,7 +49,7 @@
     <div class="img grid">
       {#each Array(rows) as _, row}
         {#each Array(cols) as _, col}
-          <div style="background-image: url('/img/bg/bg_{("00" + (row+1)).slice(-2)}_{("00" + (col+1)).slice(-2)}.jpg');" />
+          <div style="background-image: url('/img/bg/bg_{("00" + (row+1)).slice(-2)}_{("00" + (col+1)).slice(-2)}.jpg');" use:inview={{ rootMargin: '500px', unobserveOnEnter: true }} on:enter={()=>console.log('hi')} />
         {/each}
       {/each}
     </div>

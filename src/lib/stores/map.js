@@ -51,8 +51,8 @@ function createPos(config, viewport, scale) {
 
     let minX = 0
     let minY = 0
-    let maxX = config.bgWidth - $viewport.width;
-    let maxY = config.bgHeight - $viewport.height;
+    let maxX = config.bgWidth * $scale - $viewport.width;
+    let maxY = config.bgHeight * $scale - $viewport.height;
     return { minX, minY, maxX, maxY }
   }
 
