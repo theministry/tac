@@ -26,6 +26,7 @@
     "carbon-icons-svelte": "^10.33.0",
     "js-yaml": "^3.14.1",
     "marked": "^2.1.2",
-    "netlify-cms-app": "^2.15.30"
+    "netlify-cms-app": "^2.15.30",
+    "transformation-matrix": "^2.8.0"
   }
 }

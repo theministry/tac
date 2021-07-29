@@ -1,5 +1,8 @@
 <script>
+  import { onMount } from 'svelte';
   import { size, pos, dragging, scale, detailsVisible, viewport } from "$lib/stores/map";
+
+  import { scale as sc, translate as tr, compose, toCSS } from 'transformation-matrix';
   
   import Markers from "./Markers.svelte"
   import UI from "./UI.svelte"
@@ -7,11 +10,22 @@
   
   import { startDrag } from "$lib/util/draggable";
 
+  let rows = 4;
+  let cols = 5;
+
   $: w = $size.width;
   $: h = $size.height;
 
   $: x = $pos.x;
   $: y = $pos.y;
+
+  $: cx = x + 0.5 * $viewport.width;
+  $: cy = y + 0.5 * $viewport.height;
+  
+  $: matrix = toCSS(compose(
+    tr(-x, -y),
+    sc($scale, $scale, cx, cy)
+  ))
 </script>
 
 <div
@@ -27,22 +41,28 @@
     style="
       width: {w}px;
       height: {h}px;
-      translate: -{x}px -{y}px;
-      scale: {$scale};
+      transform: {matrix};
     "
     on:mousedown={ (e) => startDrag(e) }
   >
-    <picture>
-      <source type="image/webp" srcset="/img/bg.webp">
-      <source type="image/jpg" srcset="/img/bg.jpg">
-      <img src="/img/bg.jpg" alt="map">
-    </picture>
+    <div class="img grid">
+      {#each Array(rows) as _, row}
+        {#each Array(cols) as _, col}
+          <div style="background-image: url('/img/bg/bg_{("00" + (row+1)).slice(-2)}_{("00" + (col+1)).slice(-2)}.jpg');" />
+        {/each}
+      {/each}
+    </div>
     <Markers />
   </div>
   <UI />
 </div>
 
 <style>
+  .grid {
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
+  }
   .map {
     transform-origin: top left;
     position: absolute;
@@ -50,12 +70,15 @@
     cursor: grab;
   }
 
-  picture {
+  .img {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
+
+    width: 100%;
+    height: 100%;
   }
 
   .viewport {

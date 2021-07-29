@@ -5,14 +5,14 @@ let config = {
   bgWidth: 15188,
   bgHeight: 10000,
 
-  startX: 7200,
-  startY: 4800,
+  startX: 4800,
+  startY: 6100,
   moveStep: 50,
 
   startZoom: 1.0,
   zoomStep: 0.2,
-  minZoom: 0.4,
-  maxZoom: 4.0,
+  minZoom: 0.2,
+  maxZoom: 1.4,
 }
 
 function createScale(config) {
@@ -51,8 +51,8 @@ function createPos(config, viewport, scale) {
 
     let minX = 0
     let minY = 0
-    let maxX = config.bgWidth * $scale - $viewport.width;
-    let maxY = config.bgHeight * $scale - $viewport.height;
+    let maxX = config.bgWidth - $viewport.width;
+    let maxY = config.bgHeight - $viewport.height;
     return { minX, minY, maxX, maxY }
   }
 

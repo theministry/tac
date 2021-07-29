@@ -1,5 +1,5 @@
 import { get } from "svelte/store"
-import { pos, dragging, moved } from "$lib/stores/map"
+import { pos, dragging, moved, scale } from "$lib/stores/map"
 
 let o = { x: 0, y: 0 };
 
