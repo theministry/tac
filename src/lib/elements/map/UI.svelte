@@ -1,5 +1,5 @@
 <script>
-  import { pos, scale } from "$lib/stores/map";
+  import { pos, scale, config } from "$lib/stores/map";
 
   import ArrowLeft20 from "carbon-icons-svelte/lib/ArrowLeft20";
   import ArrowRight20 from "carbon-icons-svelte/lib/ArrowRight20";
@@ -10,6 +10,8 @@
   import Subtract20 from "carbon-icons-svelte/lib/Subtract20";
   import Reset20 from "carbon-icons-svelte/lib/Reset20";
 
+  $: minzoom = $scale === config.minZoom ? true : false;
+  $: maxzoom = $scale === config.maxZoom ? true : false;
 </script>
 
 <button class="left" on:click={() => pos.moveLeft(250)}>
@@ -28,11 +30,11 @@
   <ArrowDown20 title="down" />
 </button>
 
-<button class="zoomin" on:click={scale.zoomIn}>
+<button class="zoomin" on:click={scale.zoomIn} disabled={maxzoom}>
   <Add20 title="zoom in" />
 </button>
 
-<button class="zoomout" on:click={scale.zoomOut}>
+<button class="zoomout" on:click={scale.zoomOut} disabled={minzoom}>
   <Subtract20 title="zoom out" />
 </button>
 
@@ -104,5 +106,11 @@
   .zoomout {
     bottom: 50px;
     right: 10px;
+  }
+
+  button:disabled {
+    background-color: var(--grey);
+    color: #999;
+    border: 2px solid #999;
   }
 </style>

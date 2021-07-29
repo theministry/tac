@@ -1,18 +1,18 @@
 import { readable, writable, derived, get } from 'svelte/store'
 import { round } from '$lib/util/round'
 
-let config = {
+export let config = {
   bgWidth: 15188,
   bgHeight: 10000,
 
-  startX: 4800,
-  startY: 6100,
+  startX: 4500,
+  startY: 6400,
   moveStep: 50,
 
-  startZoom: 1.0,
-  zoomStep: 0.1,
-  minZoom: 0.8,
-  maxZoom: 1.5,
+  startZoom: 0.75,
+  zoomStep: 0.5,
+  minZoom: 0.25,
+  maxZoom: 1.25,
 }
 
 function createScale(config) {
@@ -62,10 +62,10 @@ function createPos(config, viewport, scale) {
     pos.x += x;
     pos.y += y;
 
-    pos.x = (pos.x <= minX) ? minX : pos.x;
-    pos.x = (pos.x >= maxX) ? maxX : pos.x;
-    pos.y = (pos.y <= minY) ? minY : pos.y;
-    pos.y = (pos.y >= maxY) ? maxY : pos.y;
+    // pos.x = (pos.x <= minX) ? minX : pos.x;
+    // pos.x = (pos.x >= maxX) ? maxX : pos.x;
+    // pos.y = (pos.y <= minY) ? minY : pos.y;
+    // pos.y = (pos.y >= maxY) ? maxY : pos.y;
     
     return pos
   })
@@ -73,10 +73,11 @@ function createPos(config, viewport, scale) {
   const moveTo = ({x=0, y=0}) => {
     let { minX, minY, maxX, maxY } = updateMinMax()
 
-    x = (x <= minX) ? minX : x;
-    y = (y <= minY) ? minY : y;
-    x = (x >= maxX) ? maxX : x;
-    y = (y >= maxY) ? maxY : y;
+    // x = (x <= minX) ? minX : x;
+    // y = (y <= minY) ? minY : y;
+    // x = (x >= maxX) ? maxX : x;
+    // y = (y >= maxY) ? maxY : y;
+
     set({ x, y })
   }
 

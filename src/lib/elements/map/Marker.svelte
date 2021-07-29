@@ -94,7 +94,7 @@
     position: absolute;
     width: 200px;
     height: 200px;
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
     margin-left: 500px;
     transform-origin: top left;
