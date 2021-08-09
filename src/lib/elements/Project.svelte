@@ -16,7 +16,11 @@
   
   const dispatch = createEventDispatcher();
 
-  $: { name, action, images, author } = project.frontmatter
+  $: name = project.frontmatter.name
+  $: action = project.frontmatter.action
+  $: images = project.frontmatter.images
+  $: author = project.frontmatter.author
+  
   $: location = getLocation(project.frontmatter.location)
   $: id = ("000" + project.frontmatter.id).slice(-3)
   $: content = marked( project.content )
