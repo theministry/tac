@@ -9,10 +9,10 @@ export let config = {
   startY: 6400,
   moveStep: 50,
 
-  startZoom: 0.75,
+  startZoom: 0.50,
   zoomStep: 0.25,
   minZoom: 0.25,
-  maxZoom: 1.00,
+  maxZoom: 0.75,
 }
 
 function createScale(config) {
