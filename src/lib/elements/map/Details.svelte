@@ -6,7 +6,7 @@
   import Project from "$lib/elements/Project.svelte"
 
   // export let projects = getContext("projects")
-  let project = $detailsProject
+  $: project = $detailsProject
 
   const toggle = () => {
     $detailsVisible = false
