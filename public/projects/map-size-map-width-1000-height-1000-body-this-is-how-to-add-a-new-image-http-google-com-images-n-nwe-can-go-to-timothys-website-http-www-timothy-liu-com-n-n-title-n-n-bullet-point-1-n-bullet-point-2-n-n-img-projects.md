@@ -23,7 +23,7 @@ We can go to [Timothy's website](http://www.timothy-liu.com).
 # Title
 
 * bullet point 1
-* bullet point 2
+* bullet point 2[](https://www.youtube.com/watch?v=ivRi1jsJomU)
 
 ![](/img/projects/04_02.png)
 
