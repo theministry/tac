@@ -47,7 +47,13 @@
     on:mousedown={ (e) => startDrag(e) }
     on:touchstart={ (e) => startDrag(e) }
   >
-    <div class="img grid">
+    <div
+      class="img grid"
+      style="
+        grid-template-rows: repeat({rows}, 1fr);
+        grid-template-columns: repeat({cols}}, 1fr);
+      "
+    >
       {#each Array(rows) as _, row}
         {#each Array(cols) as _, col}
           <div style="background-image: url('/img/bg/bg_{("00" + (row+1)).slice(-2)}_{("00" + (col+1)).slice(-2)}.jpg');" use:inview={{ rootMargin: '500px', unobserveOnEnter: true }} on:enter={()=>console.log('hi')} />
@@ -62,8 +68,6 @@
 <style>
   .grid {
     display: grid;
-    grid-template-rows: repeat(4, 1fr);
-    grid-template-columns: repeat(5, 1fr);
 
     user-select: none;
     -moz-user-select: none;
@@ -105,5 +109,5 @@
   .dragging {
     transition: none;
   }
-  
+
 </style>
