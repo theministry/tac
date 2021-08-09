@@ -12,7 +12,7 @@
 
 {#if $detailsVisible}
 <aside>
-  <Project closable project={$detailsProject} on:close={toggle} />
+  <Project closable bind:project={$detailsProject} on:close={toggle} />
 </aside>
 {/if}
 
