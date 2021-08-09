@@ -11,8 +11,8 @@
   
   import { startDrag } from "$lib/util/draggable";
 
-  let rows = 6;
-  let cols = 8;
+  let rows = 8;
+  let cols = 12;
 
   $: w = $size.width;
   $: h = $size.height;
