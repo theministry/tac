@@ -5,9 +5,6 @@
   // import Topbar from "$lib/elements/Topbar.svelte"
   import Project from "$lib/elements/Project.svelte"
 
-  // export let projects = getContext("projects")
-  let project = $detailsProject
-
   const toggle = () => {
     $detailsVisible = false
   }
@@ -15,7 +12,7 @@
 
 {#if $detailsVisible}
 <aside>
-  <Project closable { project } on:close={toggle} />
+  <Project closable bind:project={$detailsProject} on:close={toggle} />
 </aside>
 {/if}
 
