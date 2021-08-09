@@ -15,7 +15,7 @@
 
 {#if $detailsVisible}
 <aside>
-  <Project closable { project } on:close={toggle} />
+  <Project closable bind:project={project} on:close={toggle} />
 </aside>
 {/if}
 
