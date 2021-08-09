@@ -11,8 +11,8 @@ let config = {
 
   startZoom: 1.0,
   zoomStep: 0.1,
-  minZoom: 0.8,
-  maxZoom: 1.5,
+  minZoom: 0.7,
+  maxZoom: 1.0,
 }
 
 function createScale(config) {
