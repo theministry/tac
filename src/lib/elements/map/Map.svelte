@@ -51,7 +51,7 @@
       class="img grid"
       style="
         grid-template-rows: repeat({rows}, 1fr);
-        grid-template-columns: repeat({cols}}, 1fr);
+        grid-template-columns: repeat({cols}, 1fr);
       "
     >
       {#each Array(rows) as _, row}
