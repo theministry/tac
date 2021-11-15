@@ -1,0 +1,19 @@
+---
+id: 204
+marker: /img/projects/object_04.png
+coordinates:
+  x: 6610
+  y: 6150
+size:
+  width: 550
+  height: 550
+name: Pizza Oven 2
+author: Anonymous
+location: common
+action: Making Pizza
+images:
+  - /img/projects/04_01.png
+  - /img/projects/04_02.png
+---
+
+instructions_04
