@@ -25,6 +25,8 @@
   $: id = ("000" + project.frontmatter.id).slice(-3)
   $: content = marked( project.content )
 
+  $: no_content = project.content.length === 0;
+
   const close = () => {
     dispatch('close')
   }
@@ -63,6 +65,7 @@
   class="project"
   class:expandable
   class:expanded
+  class:no_content
 >
   <div class="container" >
   {#if !collapsed}
@@ -115,6 +118,11 @@
     transition: all ease-in-out 1s;
   }
 
+  .expanded.no_content {
+    grid-row-end: span 3;
+    grid-column-end: span 2;
+  }
+
   @media screen and (max-width: 88rem) {
     .expanded {
       max-width: 100%;
@@ -148,6 +156,14 @@
     margin-bottom: 2rem;
   }
 
+  :global(.content *) {
+    max-width: 100%;
+  }
+
+  :global(.content ol) {
+    padding-inline-start: 16px;
+  }
+
   h4 {
     text-transform: uppercase;
     font-size: 1.5rem;
@@ -161,7 +177,7 @@
 
   h4.author {
     margin-top: 0;
-    margin-bottom: 0rem;
+    margin-bottom: 1rem;
   }
 
   h3 {
@@ -169,30 +185,32 @@
     margin-left: 1rem;
     text-transform: lowercase;
     font-weight: normal;
-    line-height: 3rem;
+    line-height: 3.5rem;
     letter-spacing: -1.4px;
   }
 
   h3.location {
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
   }
 
-  h3::after {
-    margin-left: .5rem; 
+  h3::before {
+    margin-left: -.5rem; 
+    margin-bottom: .5rem;
     font-size: 1rem;
     height: 1rem;
     line-height: 1rem;
     letter-spacing: -0.2px;
+    display: block;
     -webkit-text-stroke: 0;
     -webkit-text-stroke-width: 0;
     -webkit-text-fill-color: currentColor;
   }
 
-  h3.location::after {
+  h3.location::before {
     content: "/ location"
   } 
 
-  h3.action::after {
+  h3.action::before {
     content: "/ action"
   }
 

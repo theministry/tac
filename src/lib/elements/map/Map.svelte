@@ -1,15 +1,12 @@
 <script>
-  import { onMount } from 'svelte';
   import { inview } from 'svelte-inview'
-  import { size, pos, dragging, scale, detailsVisible, viewport } from "$lib/stores/map";
-
-  import { scale as sc, translate as tr, compose, toCSS } from 'transformation-matrix';
+  import { size, pos, scale, details, viewport } from "$lib/stores/map";
   
   import Markers from "./Markers.svelte"
   import UI from "./UI.svelte"
   import Details from "./Details.svelte"
-  
-  import { startDrag } from "$lib/util/draggable";
+
+  import { mapctrl } from "$lib/util/mapctrl"
 
   let rows = 8;
   let cols = 12;
@@ -17,16 +14,8 @@
   $: w = $size.width;
   $: h = $size.height;
 
-  $: x = $pos.x;
-  $: y = $pos.y;
-
-  $: cx = x + 0.5 * $viewport.width;
-  $: cy = y + 0.5 * $viewport.height;
-  
-  $: matrix = toCSS(compose(
-    tr(-x, -y),
-    sc($scale, $scale, cx, cy)
-  ))
+  $: tileWidth = w / cols;
+  $: tileHeight = h / rows;
 </script>
 
 <div
@@ -34,29 +23,39 @@
   bind:clientWidth={$viewport.width}
   bind:clientHeight={$viewport.height}
   >
-  {#if $detailsVisible }
+  {#if $details.visible }
     <Details />
   {/if}
   <div 
-    class="map {$dragging ? 'dragging' : ''}"
+    class="map dragging"
     style="
       width: {w}px;
       height: {h}px;
-      transform: {matrix};
     "
-    on:mousedown={ (e) => startDrag(e) }
-    on:touchstart={ (e) => startDrag(e) }
+    use:mapctrl={{
+      pos: { x: $pos.x, y: $pos.y },
+      scale: $scale.zoom,
+    }}
+    on:dblclick={() => { $scale.zoom = $scale.zoom <= $scale.max ?  $scale.zoom + 0.1 : $scale.zoom }}
+    on:drag:end={(e) => {
+      console.log(e.detail)
+      pos.set({x: e.detail.pos.x, y: e.detail.pos.y});
+    }}
   >
     <div
       class="img grid"
       style="
-        grid-template-rows: repeat({rows}, 1fr);
-        grid-template-columns: repeat({cols}, 1fr);
+        grid-template-rows: repeat({rows}, {tileHeight}px);
+        grid-template-columns: repeat({cols}, {tileWidth}px);
       "
     >
       {#each Array(rows) as _, row}
         {#each Array(cols) as _, col}
-          <div style="background-image: url('/img/bg/bg_{("00" + (row+1)).slice(-2)}_{("00" + (col+1)).slice(-2)}.jpg');" use:inview={{ rootMargin: '500px', unobserveOnEnter: true }} on:enter={()=>console.log('hi')} />
+          <div 
+            class="tile"
+            style="background-image: url('/img/bg/bg_{(101 + col)}_{(101 + row)}.jpg');"
+            use:inview={{ rootMargin: '2000px', unobserveOnEnter: true }} 
+          />
         {/each}
       {/each}
     </div>
@@ -76,10 +75,14 @@
     -o-user-select: none;
   }
   .map {
-    transform-origin: top left;
+    transform-origin: center center;
     position: absolute;
-    transition: all 0.1s ease-in-out;
+    /* transition: all 0.1s ease-in-out; */
     cursor: grab;
+  }
+
+  .map:active {
+    cursor: grabbing;
   }
 
   .img {
@@ -103,11 +106,21 @@
     margin: 0;
     padding: 0;
 
-    background-color: black;
+    --sbg: rgb(229, 224, 216);
+    /* --sbg: white; */
+    --sfg: rgba(77, 128, 121, .3);
+
+    background-color: var(--sbg);
+    background-image: radial-gradient(circle, var(--sfg) 1px, transparent 1px);
+    background-size: 2rem 2rem;
   }
 
   .dragging {
     transition: none;
+  }
+
+  .tile {
+    background-size: cover;
   }
 
 </style>

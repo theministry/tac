@@ -12,15 +12,17 @@
 <article id="{id.split(". ")[1]}">
   <div class="text">
     <div class="inner info markdown">
-      <h4>{title}</h4>
+      <h4 class="title">{title}</h4>
       {@html content}
     </div>
   </div>
   <div class="images">
     <div class="inner info img">
+      {#if images}
       {#each images as image}
         <img src="{image}" alt="{image}" />
       {/each}
+      {/if}
     </div>
   </div>
 </article>
@@ -34,6 +36,14 @@
     text-transform: uppercase;
   }
 
+  h4.title {
+    margin-bottom: 0;
+  }
+
+  h4.title::before {
+    content: "/ "
+  }
+
   .text {
     background-color: white;
     width: 50%;
@@ -45,12 +55,12 @@
 
     /* continuous layout */
     border-right: var(--border);
-    padding-bottom: 2rem;
-    
+    padding-bottom: 16rem;
   }
   
   .images {
     width: 50%;
+    padding-bottom: 16rem;
   }
 
   .inner {
@@ -79,8 +89,13 @@
     margin-bottom: 1rem;
   }
 
+  :global(.inner.info > p) {
+    line-height: 1.3rem;
+  }
+
   :global(.inner.info > h1) {
     font-size: 3rem;
+    line-height: 3rem;
   }
 
   @media screen and (max-width: 600px) {

@@ -20,5 +20,6 @@
     flex-grow: 1;
     display: flex;
     flex-direction: row;
+    position: relative;
   }
 </style>

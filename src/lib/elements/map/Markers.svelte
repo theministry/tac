@@ -14,9 +14,11 @@
 </script>
 
 {#each Object.values(projects) as project (project)}
-  {#if checkLocation(project.frontmatter.location)}
-    <Marker
-      project={project}
-    />
+  {#if !project.frontmatter.archived }
+    {#if checkLocation(project.frontmatter.location)}
+      <Marker
+        project={project}
+      />
+    {/if}
   {/if}
 {/each}

@@ -14,6 +14,8 @@
   import Chapters from "$lib/elements/Chapters.svelte"
   import Info from "$lib/elements/Info.svelte"
   
+  import { fly } from "svelte/transition"
+
   export let info
 
   let chapters = Object.keys(info)
@@ -24,7 +26,7 @@
   <Chapters { chapters } />
 </Sidebar>
 
-<div>
+<div transition:fly={{x: -100}}>
   {#each infoObjects as info}
     <Info info={info[1]} id={info[0]} />
   {/each}

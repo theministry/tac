@@ -1,4 +1,0 @@
----
-title: Inside Out
----
-During Dutch Design Week 2020, Timothy showed a series of installations about TAC assets. TAC’s assets expand into the city and beyond. The installation *INSIDE OUT* uses replacement, extension and retraction to explore the relation between and *individual and institution*, and between *urban and shared assets.* The boundaries between public and private are blurred: the once clear lines between inside and outside, known and unknown, and between ourselves and the others are shifting. Through the ever-changing concept of common space, Timothy Liu is questioning today's social needs and sensibilities to imagine the future of this fluid organism.

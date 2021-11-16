@@ -1,5 +1,5 @@
 <script>
-  import { pos, scale, config } from "$lib/stores/map";
+  import { pos, scale, start, details } from "$lib/stores/map";
 
   import ArrowLeft20 from "carbon-icons-svelte/lib/ArrowLeft20";
   import ArrowRight20 from "carbon-icons-svelte/lib/ArrowRight20";
@@ -10,41 +10,40 @@
   import Subtract20 from "carbon-icons-svelte/lib/Subtract20";
   import Reset20 from "carbon-icons-svelte/lib/Reset20";
 
-  $: minzoom = $scale === config.minZoom ? true : false;
-  $: maxzoom = $scale === config.maxZoom ? true : false;
+  $: minzoom = $scale.zoom < $scale.min;
+  $: maxzoom = $scale.zoom > $scale.max;
 </script>
 
-<button class="left" on:click={() => pos.moveLeft(250)}>
+<button class="left" on:click={() => $pos.x += 250 }>
   <ArrowLeft20 title="left" />
 </button>
 
-<button class="right" on:click={() => pos.moveRight(250)}>
+<button class="right" on:click={() => $pos.x -= 250 }>
   <ArrowRight20 title="right" />
 </button>
 
-<button class="up" on:click={() => pos.moveUp(250)}>
+<button class="up" on:click={() => $pos.y += 250}>
   <ArrowUp20 title="up" />
 </button>
 
-<button class="down" on:click={() => pos.moveDown(250)}>
+<button class="down" on:click={() => $pos.y -= 250}>
   <ArrowDown20 title="down" />
 </button>
 
-<button class="zoomin" on:click={scale.zoomIn} disabled={maxzoom}>
+<button class="zoomin" on:click={() => $scale.zoom += 0.1} disabled={maxzoom}>
   <Add20 title="zoom in" />
 </button>
 
-<button class="zoomout" on:click={scale.zoomOut} disabled={minzoom}>
+<button class="zoomout" on:click={() => $scale.zoom -= 0.1} disabled={minzoom}>
   <Subtract20 title="zoom out" />
 </button>
 
-<button
-  class="reset"
-  on:click={() => {
-    pos.reset();
-    scale.reset();
-  }}
->
+<button class="reset" on:click={() => {
+    $scale.zoom = $scale.default
+    $pos = $start
+    $details.visible = false
+    $details.project = ""
+  }}>
   <Reset20 title="reset map" />
 </button>
 

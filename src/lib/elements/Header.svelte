@@ -1,6 +1,15 @@
+<script>
+  import { landing } from '$lib/stores/map'
+  import { details } from '$lib/stores/map'
+</script>
+
 <header>
   <h1>
-    <a href="/" class="outline">How toGether</a>
+    <a href="/" class="outline" on:click={() => {
+      $landing = true
+      $details.visible = false
+      $details.project = ""
+      }}>How toGether</a>
   </h1>
   <nav>
     <a class="outline" href="/info">info</a>

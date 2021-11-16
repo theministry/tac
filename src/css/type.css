@@ -40,11 +40,15 @@ span {
 
 p {
 	font-size: 1rem;
-	letter-spacing: -0.2px;
+	letter-spacing: -0.1px;
 }
 
 li {
-	letter-spacing: -0.2px;
+	letter-spacing: -0.1px;
+}
+
+.label {
+	letter-spacing: -0.1px;
 }
 
 h1 {

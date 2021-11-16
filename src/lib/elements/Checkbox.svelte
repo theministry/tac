@@ -12,7 +12,7 @@
       background-color: {disabled
       ? '#999'
       : checked
-      ? 'black'
+      ? 'rgb(199,175,79)'
       : 'white'};
       border: 2px solid {disabled ? '#999' : 'black'};
     "

@@ -1,6 +1,5 @@
 <script>
-  import { scale } from "$lib/stores/map";
-  import { moved, detailsVisible, detailsProject } from "$lib/stores/map"
+  import { details } from "$lib/stores/map"
 
   export let project;
 
@@ -9,11 +8,10 @@
   let top = project.frontmatter.coordinates.y
   let size = project.frontmatter.size
 
-  const toggle = () => {
-    if(!$moved) {
-      $detailsVisible = true
-      $detailsProject = project
-    }
+  const toggle = (e) => {
+    e.stopPropagation();
+    $details.visible = true
+    $details.project = project
   }
 </script>
 
@@ -26,7 +24,7 @@
     width: {size.width}px;
     height: {size.height}px;
   "
-  on:mouseup="{toggle}"
+  on:click={toggle}
 >
 
 </div>
@@ -40,15 +38,33 @@
     background-size: contain;
     background-repeat: no-repeat;
     margin-left: 500px;
-    transform-origin: top left;
+    transform-origin: center center;
+
+    transition: 200ms ease-in-out;
   }
 
   .marker:hover {
     /* -webkit-filter: drop-shadow(4px 0 0 white) drop-shadow(0 4px 0 white) drop-shadow(-4px 0 0 white) drop-shadow(0 -4px 0 white) drop-shadow(6px 0 0 black) drop-shadow(0 6px 0 black) drop-shadow(-6px 0 0 black) drop-shadow(0 -6px 0 black); */
     /* filter: drop-shadow(4px 0 0 white) drop-shadow(0 4px 0 white) drop-shadow(-4px 0 0 white) drop-shadow(0 -4px 0 white) drop-shadow(6px 0 0 black) drop-shadow(0 6px 0 black) drop-shadow(-6px 0 0 black) drop-shadow(0 -6px 0 black); */
-    filter: brightness(120%) drop-shadow(0.5px 0 0 black) drop-shadow(0 0.5px 0 black) drop-shadow(-0.5px 0 0 black) drop-shadow(0 -0.5px 0 black);
-  
+    
     /* filter: brightness(120%); */
     cursor: pointer;
+    
+    /* animation: pulse-animation 2s infinite ease-in-out; */
+    
+    transform: scale(1.1);
+    filter: brightness(110%) drop-shadow(1px 0 0 black) drop-shadow(0 1px 0 black) drop-shadow(-1px 0 0 black) drop-shadow(0 -1px 0 black);
+  }
+
+  @keyframes pulse-animation {
+    0% {
+      transform: scale(1.08);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1.08);
+    }
   }
 </style>

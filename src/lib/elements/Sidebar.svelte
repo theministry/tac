@@ -1,4 +1,8 @@
-<aside>
+<script>
+  import { fly } from 'svelte/transition';
+</script>
+
+<aside transition:fly={{ x: -100 }}>
   <slot>
     empty sidebar
   </slot>

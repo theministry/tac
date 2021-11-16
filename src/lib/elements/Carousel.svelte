@@ -3,10 +3,9 @@
   export let collapsed
 
   export let img = 0
-
-  console.log(images)
 </script>
 
+{#if images }
 <div class="carousel" class:collapsed >
   <img src="{ images[img] }" alt="{images[img]}" />
   <div class="buttons" class:collapsed>
@@ -15,6 +14,7 @@
     {/each}
   </div>
 </div>
+{/if}
 
 <style>
   .carousel {

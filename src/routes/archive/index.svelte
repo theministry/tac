@@ -15,6 +15,8 @@
 
   import { browser } from '$app/env';
 
+  import { fly } from "svelte/transition"
+
   export let projects
   
   if (browser) {
@@ -28,7 +30,7 @@
   setContext("projects", projects)
 </script>
 
-<div class="bg">
+<div class="bg" transition:fly={{x: 100}}>
   <div 
     class="projects"
   >

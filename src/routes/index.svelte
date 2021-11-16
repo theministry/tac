@@ -15,6 +15,9 @@
   import Filters from "$lib/elements/Filters.svelte";
   import Sidebar from '$lib/elements/Sidebar.svelte';
   import Map from '$lib/elements/map/Map.svelte';
+  import Landing from "$lib/elements/Landing.svelte";
+
+  import { landing } from '$lib/stores/map'
 
   export let projects
   export let info
@@ -23,8 +26,14 @@
   setContext("info", info)
 </script>
 
+{#if !$landing}
 <Sidebar>
   <Filters { projects } />
 </Sidebar>
+{/if}
 
 <Map />
+
+{#if $landing}
+  <Landing />
+{/if}

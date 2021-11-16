@@ -1,18 +1,19 @@
 <script>
   import { getContext } from "svelte";
-  import { detailsVisible, detailsProject } from "$lib/stores/map"
+  import { details } from "$lib/stores/map"
 
   // import Topbar from "$lib/elements/Topbar.svelte"
   import Project from "$lib/elements/Project.svelte"
 
   const toggle = () => {
-    $detailsVisible = false
+    $details.visible = false
+    $details.project = ""
   }
 </script>
 
-{#if $detailsVisible}
+{#if $details.visible}
 <aside>
-  <Project closable bind:project={$detailsProject} on:close={toggle} />
+  <Project closable bind:project={$details.project} on:close={toggle} />
 </aside>
 {/if}
 
