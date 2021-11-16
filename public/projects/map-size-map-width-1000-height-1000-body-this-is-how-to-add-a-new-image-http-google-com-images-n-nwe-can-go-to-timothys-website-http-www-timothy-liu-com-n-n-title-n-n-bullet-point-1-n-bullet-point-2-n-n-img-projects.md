@@ -12,9 +12,8 @@ author: Rik Makes
 location: coworking
 action: recycle waste
 images:
-  - /img/projects/07_01.png
-  - /img/projects/screen-shot-2021-08-09-at-17.45.43.png
-  - /img/projects/29_01.png
+  - /img/projects/fragment_1_all_v2_website_all_remove_seperate_png_for-archieve-57.png
+  - /img/projects/fragment_1_all_v2_website_all_remove_seperate_png_for-archieve-56.png
 ---
 <br>
 
