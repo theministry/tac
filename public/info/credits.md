@@ -1,5 +1,9 @@
 ---
 title: Credits
+images:
+  - /img/info/cugqnwc4_400x400.jpeg
+  - /img/info/png-cultuureindhoven_logo_c_zwart_rgb_72dpi.png
+  - /img/info/stimuleringsfonds_logo.jpeg
 ---
 \- CURATED AND EDITED BY -
 
