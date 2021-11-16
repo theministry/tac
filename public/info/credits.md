@@ -7,14 +7,6 @@ Timothy Liu
 
 <br>
 
-\- WEBSITE DESIGNED AND BUILT BY -
-
-Timothy Liu (Graphic designer)
-
-Nikolai Gillissen (Digital programer)
-
-<br>
-
 \- LANDSCAPE ILLUSTRATION BY -
 
 Anastasiia Gerasimova (Illustrator)
@@ -25,7 +17,15 @@ Bernard Chiang (Urban planner) 
 
 <br>
 
-\- VIDEO ARTISTS -
+\- WEBSITE DESIGNED AND BUILT BY -
+
+Timothy Liu (Graphic designer)
+
+Nikolai Gillissen (Digital programer)
+
+<br>
+
+\- MOPPING FLOOR VIDEO ARTISTS -
 
 Dasha Tsapenko (Choreography & performer)
 
@@ -59,7 +59,7 @@ Wixxxxxx  xxxxx
 
 \- COMMISSION AND SUPPORTED BY -
 
-Temporary Art Centre Eindhoven 
+Temporary Art Centre Eindhoven (TAC)
 
 Stichting Cultuur Eindhoven
 
@@ -70,6 +70,14 @@ Stimulerings Fonds NL
 \- SPECIAL THANKS TO -
 
 Astrid Cats (TAC art director)
+
+Dasha Tsapenko
+
+Anastasia Eggers
+
+Shung-Chih Chang
+
+
 
 <br>
 
