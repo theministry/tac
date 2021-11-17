@@ -51,7 +51,7 @@
         z-index: 1000;
     }
 
-    @media screen and (max-width: 500px) {
+    @media screen and (max-width: 800px) {
         .window {
             margin-left: 25px;
             margin-top: 25px;
