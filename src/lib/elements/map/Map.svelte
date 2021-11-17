@@ -1,12 +1,18 @@
 <script>
   import { inview } from 'svelte-inview'
   import { size, pos, scale, details, viewport } from "$lib/stores/map";
+  import { onMount } from "svelte";
+  import { fade } from "svelte/transition";
   
   import Markers from "./Markers.svelte"
   import UI from "./UI.svelte"
   import Details from "./Details.svelte"
 
   import { mapctrl } from "$lib/util/mapctrl"
+
+  $: display = false;
+  onMount(() => { display = true;});
+
 
   let rows = 8;
   let cols = 12;
@@ -18,10 +24,13 @@
   $: tileHeight = h / rows;
 </script>
 
+{#if display}
+
 <div
   class="viewport"
   bind:clientWidth={$viewport.width}
   bind:clientHeight={$viewport.height}
+  transition:fade={{duration: 1500}}
   >
   {#if $details.visible }
     <Details />
@@ -63,6 +72,8 @@
   </div>
   <UI />
 </div>
+
+{/if}
 
 <style>
   .grid {

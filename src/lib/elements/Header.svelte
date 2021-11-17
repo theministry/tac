@@ -41,6 +41,8 @@
     align-items: center;
 
     border-bottom: var(--border);
+
+    z-index: 2000;
   }
 
   @media screen and (max-width: 1024px) {
