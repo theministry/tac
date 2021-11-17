@@ -3,7 +3,7 @@
     import { fade } from "svelte/transition";
 
     export let img = "01"
-    $: url = `/img/projects/object_${img}.png`
+    $: url = `/img/projects/object_${img}.webp`
 
     import { spring } from 'svelte/motion';
 

@@ -1,6 +1,6 @@
 ---
 id: 30
-marker: /img/projects/fragment_1_all_v2_website_all_remove_seperate_png-31.png
+marker: /img/projects/fragment_1_all_v2_website_all_remove_seperate_webp-31.webp
 coordinates:
   x: 6630
   y: 615
@@ -12,8 +12,8 @@ author: Rik Makes
 location: coworking
 action: Recycle Waste
 images:
-  - /img/projects/fragment_1_all_v2_website_all_remove_seperate_png_for-archieve-57.png
-  - /img/projects/fragment_1_all_v2_website_all_remove_seperate_png_for-archieve-56.png
+  - /img/projects/fragment_1_all_v2_website_all_remove_seperate_webp_for-archieve-57.webp
+  - /img/projects/fragment_1_all_v2_website_all_remove_seperate_webp_for-archieve-56.webp
 ---
 
 <br>

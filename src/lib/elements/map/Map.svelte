@@ -62,7 +62,7 @@
         {#each Array(cols) as _, col}
           <div 
             class="tile"
-            style="background-image: url('/img/bg/bg_{(101 + col)}_{(101 + row)}.jpg');"
+            style="background-image: url('/img/bg/bg_{(101 + col)}_{(101 + row)}.webp');"
             use:inview={{ rootMargin: '2000px', unobserveOnEnter: true }} 
           />
         {/each}
