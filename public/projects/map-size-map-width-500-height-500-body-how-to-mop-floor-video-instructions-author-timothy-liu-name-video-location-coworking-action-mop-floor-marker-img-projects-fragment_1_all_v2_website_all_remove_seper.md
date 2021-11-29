@@ -1,6 +1,7 @@
 ---
+archived: true
 id: 101
-marker: /img/projects/fragment_1_all_v2_website_all_remove_seperate_webp-32.webp
+marker: /img/projects/mopping-floor_intro-page.jpg
 coordinates:
   x: 10500
   y: 100
