@@ -13,7 +13,7 @@ author: Timothy Liu
 location: coworking
 action: Mop Floor Video
 images:
-  - /img/projects/mopping-floor_intro-page.jpg
+  - /img/projects/square_mopping_floor_1.png
 ---
 
 How to mop floor video instructions
