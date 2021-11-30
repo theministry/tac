@@ -14,6 +14,8 @@ location: coworking
 action: Mop Floor Video
 images:
   - /img/projects/square_mopping_floor_1.png
+  - /img/projects/fragment_1_all_v2_website_all_remove_seperate_png_for-archieve-59.jpg
+  - /img/projects/fragment_1_all_v2_website_all_remove_seperate_png_for-archieve-58.jpg
 ---
 <br>
 
