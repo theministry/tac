@@ -15,5 +15,10 @@ action: Mop Floor Video
 images:
   - /img/projects/square_mopping_floor_1.png
 ---
+<br>
 
-How to mop floor video instructions
+𝙃𝙤𝙬 𝙩𝙤 𝙢𝙤𝙥 𝙛𝙡𝙤𝙤𝙧 𝙫𝙞𝙙𝙚𝙤 𝙞𝙣𝙨𝙩𝙧𝙪𝙘𝙩𝙞𝙤𝙣𝙨?
+
+<br>
+
+<br>
