@@ -1,10 +1,10 @@
 ---
 archived: false
 id: 100
-marker: /img/projects/fragment_1_all_v2_website_all_remove_seperate_png-34.png
+marker: /img/projects/fragment_1_all_v2_website_all_remove_seperate_png-34-34.png
 coordinates:
-  x: 4870
-  y: 5050
+  x: 4800
+  y: 5150
 size:
   width: 500
   height: 500
