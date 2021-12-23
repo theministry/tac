@@ -6,8 +6,8 @@ coordinates:
   x: 4750
   y: 5190
 size:
-  width: 500
-  height: 500
+  width: 516
+  height: 553
 name: Christmas Tree
 author: Astrid Cats
 location: meeting
