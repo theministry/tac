@@ -3,11 +3,11 @@ archived: false
 id: 100
 marker: /img/projects/fragment_1_all_v2_website_all_remove_seperate_png-34-34.png
 coordinates:
-  x: 4750
-  y: 5190
+  x: 4700
+  y: 5220
 size:
-  width: 516
-  height: 553
+  width: 536
+  height: 573
 name: Christmas Tree
 author: Astrid Cats
 location: meeting
