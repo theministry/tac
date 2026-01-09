@@ -1,34 +1,34 @@
 {
-  "name": "how-to-gether",
-  "version": "0.0.1",
-  "scripts": {
-    "dev": "svelte-kit dev",
-    "build": "svelte-kit build",
-    "preview": "svelte-kit preview",
-    "lint": "prettier --check --plugin-search-dir=. . && eslint --ignore-path .gitignore .",
-    "format": "prettier --write --plugin-search-dir=. ."
-  },
-  "devDependencies": {
-    "@sveltejs/adapter-netlify": "^1.0.0-next.25",
-    "@sveltejs/adapter-static": "^1.0.0-next.13",
-    "@sveltejs/adapter-vercel": "^1.0.0-next.26",
-    "@sveltejs/vite-plugin-svelte": "^1.0.0-next.30",
-    "@sveltejs/kit": "^1.0.0-next.195",
-    "eslint": "^7.22.0",
-    "eslint-config-prettier": "^8.1.0",
-    "eslint-plugin-svelte3": "^3.2.0",
-    "prettier": "~2.2.1",
-    "prettier-plugin-svelte": "^2.2.0",
-    "svelte": "^3.44.1"
-  },
-  "type": "module",
-  "dependencies": {
-    "animate-css-grid": "^1.4.3",
-    "carbon-icons-svelte": "^10.33.0",
-    "js-yaml": "^3.14.1",
-    "marked": "^2.1.2",
-    "netlify-cms-app": "^2.15.30",
-    "svelte-inview": "^2.0.1",
-    "transformation-matrix": "^2.8.0"
-  }
+	"name": "how-to-gether",
+	"version": "0.0.1",
+	"scripts": {
+		"dev": "svelte-kit dev",
+		"build": "svelte-kit build",
+		"preview": "svelte-kit preview",
+		"lint": "prettier --check --plugin-search-dir=. . && eslint --ignore-path .gitignore .",
+		"format": "prettier --write --plugin-search-dir=. ."
+	},
+	"devDependencies": {
+		"@sveltejs/adapter-netlify": "1.0.0-next.25",
+		"@sveltejs/adapter-static": "1.0.0-next.13",
+		"@sveltejs/adapter-vercel": "1.0.0-next.26",
+		"@sveltejs/vite-plugin-svelte": "1.0.0-next.30",
+		"@sveltejs/kit": "1.0.0-next.195",
+		"eslint": "7.22.0",
+		"eslint-config-prettier": "8.1.0",
+		"eslint-plugin-svelte3": "3.2.0",
+		"prettier": "~2.2.1",
+		"prettier-plugin-svelte": "2.2.0",
+		"svelte": "3.44.1"
+	},
+	"type": "module",
+	"dependencies": {
+		"animate-css-grid": "1.4.3",
+		"carbon-icons-svelte": "10.33.0",
+		"js-yaml": "3.14.1",
+		"marked": "2.1.2",
+		"netlify-cms-app": "2.15.30",
+		"svelte-inview": "2.0.1",
+		"transformation-matrix": "2.8.0"
+	}
 }
